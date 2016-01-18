@@ -1,0 +1,138 @@
+$ga-font-path: "https://fonts.googleapis.com/css?family=Raleway:800,400,200|Raleway+Dots|Oxygen:700,400,300";
+$cursor-disabled: not-allowed !default;
+$border-color: #ddd;
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-title:  "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+$line-height-base: 1.428571429 !default;
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default;
+
+//== Colors
+//
+$white: hsl(0, 0%, 100%);
+$green: hsl(174, 100%, 29%);
+$blue: hsl(207, 55%, 52%);
+$light-blue: lighten($blue, 13.5%);
+$lighter-blue: hsl(212, 57%, 96%);
+$yellow: hsl(30, 100%, 63%);
+$red: hsl(355, 100%, 36%);
+$orange: hsl(36, 66%, 60%);
+$salmon: hsl(6, 66%, 60%);
+$black: hsl(0, 0%, 0%);
+$dark-blue: darken($blue, 25%);
+$slide-distance: 100;
+$slide-duration: .4s;
+$gray: #666;
+$light-gray: lighten($gray, 25%);
+$dark-gray: darken($gray, 25%);
+$gray-base:             #000 !default;
+$gray-darker:           lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             lighten($gray-base, 20%) !default;   // #333
+$gray:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-light:            lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee
+$brand-primary:         darken($blue, 6.5%) !default; // #337ab7
+$brand-success:         lighten($green, 6.5%) !default;
+$brand-info:            lighten($blue, 6.5%) !default;
+$brand-warning:         lighten($orange, 6.5%) !default;
+$brand-danger:          darken($red, 6.5%) !default;
+
+// If you want to have rounded things, use this as the base value for roundness calculation
+$border-radius-base: 0;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               $white !default;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+
+//== Badges
+//
+//##
+
+$badge-color:                 $white !default;
+//** Linked badge text color on hover
+$badge-link-hover-color:      $white !default;
+$badge-bg:                    $gray-light !default;
+
+//** Badge text color in active nav link
+$badge-active-color:          $link-color !default;
+//** Badge background color in active nav link
+$badge-active-bg:             $white !default;
+
+$badge-font-weight:           bold !default;
+$badge-line-height:           1 !default;
+$badge-border-radius:         10px !default;
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+
+$alert-padding:               15px !default;
+$alert-border-radius:         $border-radius-base !default;
+$alert-link-font-weight:      bold !default;
+
+$alert-success-bg:            $state-success-bg !default;
+$alert-success-text:          $state-success-text !default;
+$alert-success-border:        $state-success-border !default;
+
+$alert-info-bg:               $state-info-bg !default;
+$alert-info-text:             $state-info-text !default;
+$alert-info-border:           $state-info-border !default;
+
+$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-text:          $state-warning-text !default;
+$alert-warning-border:        $state-warning-border !default;
+
+$alert-danger-bg:             $state-danger-bg !default;
+$alert-danger-text:           $state-danger-text !default;
+$alert-danger-border:         $state-danger-border !default;

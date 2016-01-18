@@ -1,0 +1,38 @@
+[
+  {
+    "name": "About",
+    "link": "/about",
+    "category": "Page",
+    "status": "Development"
+  },
+  {
+    "name": "Fleet",
+    "link": "/fleet",
+    "category": "Page",
+    "status": "Development"
+  },
+  {
+    "name": "Services",
+    "link": "/services",
+    "category": "Page",
+    "status": "Development"
+  },
+  {
+    "name": "App",
+    "link": "/app",
+    "category": "Page",
+    "status": "Development"
+  },
+  {
+    "name": "Blog",
+    "link": "/blog",
+    "category": "Page",
+    "status": "Development"
+  },
+  {
+    "name": "Reservations",
+    "link": "/reservations",
+    "category": "Page",
+    "status": "Development"
+  }
+]

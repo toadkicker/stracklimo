@@ -1,0 +1,15 @@
+include ../link/link
+
+mixin header(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  #header.row.middle-xs
+    div.logo.col-xs-6
+      a(href="/")
+        img.text(src="../images/strackground.png")
+    div.col-xs-6(class=spec.__class)&attributes(attributes)
+      .row.end-xs
+        #menu.col-xs
+          each item in site.data.menu
+            +link(href=item.link,class='item')
+              = item.name

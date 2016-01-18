@@ -1,0 +1,140 @@
+// Base configuration
+@import "../../bower_components/normalize-css/normalize.css";
+@import "../../bower_components/include-media/dist/_include-media";
+@import 'variables';
+@import 'typography';
+@import 'animate';
+@import 'zindex';
+// Normalize Styles
+@import url($ga-font-path);
+
+// Flexbox Grid
+$grid-columns: 12;
+$gutter-width: .5rem;
+$outer-margin: 1rem;
+@import '../../node_modules/flexboxgrid-sass/flexboxgrid';
+
+// Import Modules
+@import '../_modules/link/link';
+@import '../_modules/header/header';
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.yeogurt-info {
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.version {
+  font-size: 14px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.logo {
+  margin-top: 15px;
+}
+
+// Styling on warning for users on IE7 or below
+.browsehappy {
+  text-align: center;
+  margin: 0;
+  background: #fff8e2;
+  color: #000;
+  padding: 0.5em 0;
+}
+
+body #main {
+  padding-top: 6rem;
+}
+
+body #main {
+  background-origin: padding-box;
+  background: url('/images/sunset-car.png') no-repeat top center;
+  background-size: contain;
+  .hero-unit {
+    padding: 1rem 0;
+  }
+  .hero-unit h3 {
+    font-weight: 400;
+    font-family: $raleway;
+    font-size: 4rem;
+    margin: 0;
+  }
+  button.btn, a.btn {
+    -webkit-appearance: none;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ddd;
+    text-transform: uppercase;
+    display: block;
+    padding: 0.5rem;
+  }
+
+  .row.one {
+    background: transparent url('/images/LeatherHoles-Plain.png');
+    background-origin: padding-box;
+    background-size: cover;
+    color: $white;
+    margin: 0 -1rem;
+    padding: 8rem 1rem;
+    h3 {
+      font-weight: 200;
+      font-family: $raleway;
+      font-size: 4rem;
+      margin: 0;
+    }
+    p {
+      font-weight: 400;
+      font-family: $gotham;
+      font-size: 1rem;
+      margin: 0;
+      img.logo {
+        height: 75px;
+        width: auto;
+      }
+    }
+  }
+  .row.two {
+    position: relative;
+    .interior, .exterior {
+      background-clip: border-box;
+      background-repeat: no-repeat;
+      height: 15rem;
+      width: 100%;
+    }
+    .exterior {
+      background-image: url("/images/Lincoln MKS Ext.jpg");
+      background-size: contain;
+    }
+    .mask {
+      background: url("/images/mask.svg") repeat;
+      .interior {
+        background-color: rgb(58, 41, 55);
+        background-size: cover;
+        background-image: url("/images/Lincoln MKS Int.jpg");
+      }
+    }
+  }
+
+  .row.three {
+    background-image: url('/images/app_mobile.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: 25rem;
+  }
+}

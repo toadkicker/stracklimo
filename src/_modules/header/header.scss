@@ -1,0 +1,37 @@
+// header styles
+@import "../../_styles/variables";
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  padding: 1rem;
+  font-family: "Raleway", "Raleway Light", "Times", serif;
+  background: rgba(0,0,0,0.5);
+  .logo a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  a {
+    color: $light-gray;
+    text-decoration: none;
+    &:hover {
+      color: $gray;
+    }
+  }
+
+  img.text {
+    width: 15rem;
+  }
+
+  #menu a {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    &.active {
+      border: 1px solid $light-gray;
+    }
+  }
+}

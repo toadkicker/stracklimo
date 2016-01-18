@@ -1,0 +1,7 @@
+node_modules
+*.log
+build
+src/libs/**/*
+tmp
+.grunt
+.DS_Store

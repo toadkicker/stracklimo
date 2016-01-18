@@ -1,0 +1,11 @@
+mixin footer(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.row(class=spec.__class)&attributes(attributes)
+    .col-xs-4
+      h6 Follow Us
+    .col-xs-4
+      h6 Contact Us
+    .col-xs-4
+      h6 Get the App
