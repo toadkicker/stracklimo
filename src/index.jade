@@ -1,70 +1,109 @@
-extends _layouts/base
-
-include _modules/link/link
+extends _layouts/parallax
 
 block content
-  .row.home.hero-unit.middle-xs
-    .col-xs-4.col-lg-6
-      h3 Now You've Arrived
-      div.cta-btn
-        button.btn Book Your Reservation
-    .col-xs-8.center-xs.middle-xs
-      iframe(width="480", height="315", src="https://www.youtube.com/embed/JwTU4JS1kso", frameborder="0", allowfullscreen)
-
-  .row.one
-    .col-xs.center-xs
-      h3 Luxury at every turn
-      p From Los Angeles to Hong Kong and everywhere in between, Strack provides you with seamless transportation worldwide. Whether we are transporting one person or 200, we accommodate your needs with the latest luxury driven vehicles, onboard Wi-Fi and complimentary bottled water.
+  .row.content-space-one
+    .text-center
+      h1.title Luxury at every turn
+      p.lead From Los Angeles to Hong Kong and everywhere in between, Strack provides you with seamless transportation worldwide. Whether we are transporting one person or 500, we accommodate your needs with the latest luxury driven vehicles, onboard Wi-Fi and complimentary bottled water.
       p
         img.logo(src= baseUrl + "images/ai/logo.svg", alt="Strack Ground Logo", height="75")
-  .row.two
-    .col-xs
-      .exterior
-    .col-xs-6
-      .mask
-        .interior
-      h3 Meet your fleet
-      p a carousel
-      button.btn Book this ride
-  .row.three.center-xs
-    h3 An app that is going places
-  .row.four.center-xs
-    .col-xs-12
-      h3 At your service
-      .row
-        .col-xs-6
-          ul
-            li 24-hour Customer Service & Reservation Support
-            li Integration With Your Travel Management Company
-            li All-inclusive Rates, Including Taxes, Fuel, And Gratuity
-            li Instant Email Confirmation With Reservation
-        .col-xs-6
-          ul
-            li Alerts With Chauffeur Name And Cell Phone Number
-            li Highly Trained And Experienced Staff
-            li GPS Tracking In All Company Vehicles
-            li Flight Tracking For Prompt Airport Transfers
-  .row.five.center-xs
-    .col-xs
-      h3 Tours and Special Events
-      .row
-        .col-xs-6
-          p back of a car
-        .col-xs-6
-          p
-            From shopping to sightseeing and everything in between we have the tour to make your day.
-            +link(href="/fleet") Learn More
+  .row.content-block-one
+    .col-md-6.col-md-6.col-lg-6.col-sm-6.col-xs-6
+      div(style="height: 35rem;margin: 0 -15px; background-size: cover; background-image: url('/images/Lincoln MKS Ext.jpg'); background-position: 50% 50%")
+    #carousel-fleet.col-md-6.col-md-6.col-lg-6.col-sm-6.col-xs-6.carousel.slide(data-ride="carousel", style="margin: -15px")
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target="#carousel-fleet", data-slide-to="0")
+        li(data-target="#carousel-fleet", data-slide-to="1")
+        li(data-target="#carousel-fleet", data-slide-to="2")
+      // Wrapper for slides
+      .carousel-inner(role="listbox")
+        each item in site.data.fleet
+          if item.active
+            .item.active
+              img(src=item.image.url, alt=item.image.alt, class=item.image.class)
+              .carousel-caption !{item.caption}
+          else
+            .item
+              img(src=item.image.url, alt=item.image.alt, width="100%")
+              .carousel-caption !{item.caption}
+      // Controls
+      a.left.carousel-control(href="#carousel-fleet", role="button", data-slide="prev")
+        i.fa.fa-chevron-circle-left(aria-hidden="true")
+        span.sr-only Previous
 
-  .row.six.center-xs
-    .col-xs
-      h3 Executive Shuttle and Group Transportation
-      .row
-        .col-xs-6
-          p another picture
-        .col-xs-6
-          p Offering the latest in Vans to MotorCoaches paired with its Meeting Staff on the ground transportation for your event will no longer be a worry.
-          ul
-            li Convention Shuttles and Transfers
-            li Corporate Event and Shuttles
-            li Group Management Arrivals/Departures
-            li PowWow Smart Integration
+      a.right.carousel-control(href="#carousel-fleet", role="button", data-slide="next")
+        i.fa.fa-chevron-circle-right(aria-hidden="true")
+        span.sr-only Next
+  .row.content-space-two
+    .app-shots
+      .cta-app.black
+        h1 An App that is going places
+        .page-break
+        p.lead Easily make reservations by the push of a button. We’ve designed our app to take the hassle out of booking your travel plans.
+        ul
+          li Real time updates
+          li Driver Locator
+          li Travel reservation history
+          li Instant Rate Quotes
+  .row.content-space-three
+    .text-center
+      h1 At Your Service
+    .col-md-6.col-sm-6
+      ul
+        li
+          p.lead 24-hour Live Customer Service Support
+        li
+          p.lead Integration With Your Travel Management Company
+        li
+          p.lead All-inclusive Rates, Including Taxes, Fuel, And Gratuity
+        li
+          p.lead Instant Email Confirmation With Reservations
+    .col-md-6.col-sm-6
+      ul
+        li
+          p.lead Real-time Alerts With Chauffeur Name And Cell Phone Number
+        li
+          p.lead Professionally Trained And Experienced Staff
+        li
+          p.lead GPS Tracking In All Company Vehicles
+        li
+          p.lead Flight Tracking For Prompt Airport Transfers
+  .row.content-space-four.black
+    .text-center
+      h1 Tours and Special Events
+    .col-sm-6.col-md-6
+      img(src="/images/ai/redcarpet.png", style="height: 35rem")
+    .col-sm-6.col-md-6
+      p.lead From shopping to sightseeing and everything in between we have the tour to make your day.
+      a.btn.btn-success(href="/about") Learn More
+      ul.list-unstyled
+        li
+          p.lead
+            i.fa.fa-star
+            | &nbsp;Hollywood and Los Angeles
+        li
+          p.lead
+            i.fa.fa-glass
+            | &nbsp;Micro Brew & Wine
+        li
+          p.lead
+            i.fa.fa-university
+            | &nbsp;Museum Row
+        li
+          p.lead
+            i.fa.fa-shopping-bag
+            | &nbsp;Shop Melrose and more
+  .row.content-space-five
+  .row.content-space-six.black
+    .text-center
+      h1 Executive Shuttle and Group Transportation
+    .col-sm-8.col-md-8
+      img(src="/images/ai/bus.png", style="height: 35rem")
+    .col-sm-4.col-md-4
+      p.lead Strack Ground offers the latest in Sedans to MotorCoaches paired with meeting staff and technology so transportation will no longer be a worry.
+      ul
+        li Convention Shuttles and Transfers
+        li Corporate Event and Shuttles
+        li Group Management Arrivals/Departures
+        li PowWow Smart Integration

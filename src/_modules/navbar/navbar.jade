@@ -1,0 +1,22 @@
+mixin navbar(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+    .container-fluid
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#nav-items")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand.brand(href="/")
+          img.text(src="../images/strackground.png")
+      // Collect the nav links, forms, and other content for toggling
+      #nav-items.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          each item in site.data.menu
+            li
+              +link(href=item.link,class='item #{item.active ? "active" : ""}')
+                = item.name

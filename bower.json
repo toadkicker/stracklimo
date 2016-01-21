@@ -21,6 +21,9 @@
   ],
   "dependencies": {
     "normalize-strings": "normalize#~1.0.4",
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "include-media": "~1.4.2",
+    "bootstrap-sass": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0"
   }
 }

@@ -5,8 +5,11 @@
 
 import jQuery from 'jquery';
 import 'bootstrap';
+import 'parallax';
 import Link from '../_modules/link/link';
 import Header from '../_modules/header/header';
+import Navbar from '../_modules/navbar/navbar';
+import Carousel from '../_modules/carousel/carousel';
 import Footer from '../_modules/footer/footer';
 
 jQuery(() => {

@@ -1,0 +1,36 @@
+// carousel styles
+
+.carousel:not(#carousel-fleet) {
+  .caption {
+    bottom: 0;
+    left: 0;
+    margin-top: 13.5%;
+    padding: 4rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .title, .btn {
+    font-family: $raleway;
+    color: $carousel-caption-color;
+    text-shadow: $carousel-text-shadow;
+  }
+  .title {
+    font-size: 6.5rem;
+  }
+}
+
+#carousel-fleet .item img {
+  max-height: 35rem;
+}
+
+i.fa.fa-chevron-circle-left,
+i.fa.fa-chevron-circle-right {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 5;
+  display: inline-block;
+}
+
+

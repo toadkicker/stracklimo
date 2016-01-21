@@ -1,11 +1,36 @@
 mixin footer(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
+  div.row.footer.text-center(class=spec.__class)&attributes(attributes)
+    .col-xs-4
+      h4.text-uppercase Follow Us
+      ul.list-unstyled.list-inline
+        li
+          a.social(href="/")
+            img.img-responsive(src="/images/social/facebook.png")
+        li
+          a.social(href="/")
+            img.img-responsive(src="/images/social/twitter.png")
+        li
+          a.social(href="/")
+            img.img-responsive(src="/images/social/linkedin.png")
+        li
+          a.social(href="/")
+            img.img-responsive(src="/images/social/instagram.png")
+        li
+          a.social(href="/")
+            img.img-responsive(src="/images/social/pinterest.png")
 
-  div.row(class=spec.__class)&attributes(attributes)
     .col-xs-4
-      h6 Follow Us
+      h4.text-uppercase Contact Us
+      p
+        a(href="tel://888.781.5466")
+          |888.781.5466
+      p.text-uppercase E-MAIL RESERVATION
+      p.text-uppercase careers
     .col-xs-4
-      h6 Contact Us
-    .col-xs-4
-      h6 Get the App
+      h4.text-uppercase Get the App
+      p
+        img(src="/images/app_store_badge.svg" style="height: 24px;")
+        |&nbsp;
+        img(src="/images/en-play-badge.png" style="height: 24px;")

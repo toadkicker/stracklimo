@@ -1,0 +1,30 @@
+mixin carousel(config)
+  - config = config || site.data.carousel
+  - config.__class = config.__class || ''
+
+  .carousel.slide(data-ride="carousel", class=config.__class)&attributes(attributes)
+    // Indicators
+    if config.length < 1
+      ol.carousel-indicators
+        each item,index in config
+          if item.active
+            li.active(data-target="#carousel", data-slide-to=index)
+          else
+            li(data-target="#carousel", data-slide-to=index)
+    // Wrapper for slides
+    .carousel-inner
+      each item in config
+        if item.active
+          .item.active
+            img(src=item.image.url, alt=item.image.alt, class=item.image.class)
+            .caption !{item.caption}
+        else
+          .item
+            img(src=item.image.url, alt=item.image.alt, width="100%")
+            .caption !{item.caption}
+    // Controls
+    if config.length < 1
+      a.left.carousel-control(href="#carousel", role="button", data-slide="prev")
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href="#carousel", role="button", data-slide="next")
+        span.glyphicon.glyphicon-chevron-right

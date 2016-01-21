@@ -1,0 +1,17 @@
+// navbar styles
+.navbar {
+  margin-bottom: 0;
+  .item {
+    text-transform: uppercase;
+  }
+  .item.active {
+    background: rgba(128,128,128,0.8);
+    color: $black;
+  }
+  .brand {
+    padding-left: 2rem;
+  }
+}
+img.text {
+  width: 25rem;
+}

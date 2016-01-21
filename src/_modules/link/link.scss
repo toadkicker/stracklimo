@@ -2,20 +2,21 @@
 
 // unvisited link
 a:link {
-    color: #ff0000;
+  color: $white;
 }
 
 // visited link
 a:visited {
-    color: #00ff00;
+  color: darken($brand-primary, 13.5%);
 }
 
 // mouse over link
 a:hover {
-    color: #ff00ff;
+  color: lighten($brand-primary, 13.5%);
+  @include transition();
 }
 
 // selected link
 a:active {
-    color: #0000ff;
+  color: $orange;
 }

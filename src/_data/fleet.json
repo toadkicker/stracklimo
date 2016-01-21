@@ -1,0 +1,22 @@
+[{
+  "active": true,
+  "image": {
+    "url": "/images/Lincoln MKS Int.jpg",
+    "alt": "Sunset Cadilac"
+  },
+  "caption": "<h3 class=''>Meet your fleet</h1>"
+}, {
+  "active": false,
+  "image": {
+    "url": "/images/Escalade Int 1.jpg",
+    "alt": "Escalade XTS"
+  },
+  "caption": "<h3 class=''>All Accommodating</h1>"
+}, {
+  "active": false,
+  "image": {
+    "url": "/images/Ford Transit INT.jpg",
+    "alt": "Ford Transit"
+  },
+  "caption": "<h3 class=''>All Aboard!</h1>"
+}]

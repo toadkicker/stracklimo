@@ -2,6 +2,9 @@ $oxygen: "Oxygen", "Open Sans", arial, sans-serif;
 $raleway: "Raleway", "Raleway Regular", arial, sans-serif;
 $gotham: "Gotham", "Gotham Regular", "Helvetica Neue", sans-serif;
 
+$font-family-sans-serif: $gotham;
+$font-family-serif: $raleway;
+
 html {
   font-family: $gotham;
   line-height: 1.4;
