@@ -6,6 +6,7 @@
     var scroll_start = 0;
     var startchange = $('#startchange');
     var offset = startchange.offset();
+    $('body').removeClass('out').addClass('in');
     if (startchange.length){
       $(document).scroll(function() {
         scroll_start = $(this).scrollTop();
