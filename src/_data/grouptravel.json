@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Integrations with POW WOW Smart",
+    "description": "Designed for Meeting and Event Planners, our SMART ground travel management applications provide the power to effectively plan, analyze, design, forecast, and modify manifests for all types of groups and events.",
+    "image": {
+      "url": "images/services/executive/powwow.png"
+    }
+  },{
+    "title": "Meeting Staff - a seamless experience",
+    "description": "Strack Meeting Staff will be deployed on the ground to help make things work seamlessly for your event or group transportation needs. Equipped with ipads and full manifests for your group the meeting staff presents a professional warm smile to assist in getting your guests where they need to go. Strack Ground also is equipped to check in the VIP's notifying the meeting planner when contact has been made so they may focus on more important things.",
+    "image": {
+      "url": "images/services/executive/group-lady-ipad.png"
+    }
+  },{
+    "title": "Special Attention Items",
+    "description": "Marketing Materials, Branded Snacks and more can be arranged to be placed in the vehicles for your group or special events. The first impression to your guests sets the mood for the entire event, Let Strack Ground deliver on these details to create a memorable event.",
+    "image": {
+      "url": "images/services/executive/special.png"
+    }
+  },{
+    "title": "Marketing Opportunities",
+    "description": "The Strack Ground fleet consists of large moving vehicles that represent marketing space for your corporate function event. Have vehicle clings or vehicle wraps installed on the vehicles as they shuttle around a city-wide convention. Get that extra exposure for your upcoming executive shuttle needs.",
+    "image": {
+      "url": "images/services/executive/branded-bus.png"
+    }
+  },{
+    "title": "Site Inspections",
+    "description": "Strack Ground can help with your core team arriving in town and handling multiple venue inspections. Providing VIP vehicles like an Executive Van to show the group multiple venues and the city itself. Strack is here to welcome you into town and show you the best we have to offer.",
+    "image": {
+      "url": "images/services/executive/inspections.png"
+    }
+  }
+]

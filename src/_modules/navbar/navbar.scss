@@ -1,17 +1,46 @@
 // navbar styles
 .navbar {
   margin-bottom: 0;
+  font-family: "Raleway Bold", "Raleway", sans-serif;
+  color: $gray-lighter;
   .item {
     text-transform: uppercase;
+    transition: all .5s ease;
+    @include media(">tablet") {
+      padding: 1rem .25rem;
+    }
+    margin: 4rem .5rem;
+    padding: .5rem;
+  }
+  .item[href="/reservations"] {
+    border: 2px solid $gray;
+    &:hover {
+      @extend .active;
+    }
   }
   .item.active {
-    background: rgba(128,128,128,0.8);
-    color: $black;
+    background: rgba(128, 128, 128, 0.8);
+    color: $white;
   }
+  @media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      transition: all .5s ease;
+    }
+  }
+
   .brand {
-    padding-left: 2rem;
+    @include media('<desktop') {
+      padding-left: 2rem;
+      padding-top: 4rem;
+    }
+    @include media('>desktop') {
+      padding-left: 4rem;
+      padding-top: 4rem;
+    }
   }
 }
+
 img.text {
   width: 25rem;
 }

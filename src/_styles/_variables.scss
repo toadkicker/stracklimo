@@ -5,10 +5,11 @@ $border-color: #ddd;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif:  "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-title:  "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+@import url('http://allfont.net/allfont.css?fonts=raleway-bold');
+$raleway: "Raleway";
+$font-family-sans-serif:  $raleway;
+$font-family-title:  $raleway;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
@@ -142,4 +143,13 @@ $alert-danger-border:         $state-danger-border !default;
 
 $grid-gutter-width: 0;
 
-$navbar-inverse-bg: rgba(0,0,0,.5);
+$navbar-inverse-bg: rgba(0,0,0,.8);
+$navbar-height: 115px;
+
+$dropdown-bg: rgba(0,0,0,0.3);
+$dropdown-fallback-border: $black; // IE8 fallback
+$dropdown-border: $black;
+$dropdown-link-color: $white;
+$dropdown-link-hover-bg: $light-gray;
+$dropdown-link-hover-color: $black;
+$thumbnail-border: transparent;

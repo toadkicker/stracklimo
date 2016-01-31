@@ -13,6 +13,11 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
         path.join(dirs.source, dirs.styles, '**/*.{scss,sass}'),
         path.join(dirs.source, dirs.modules, '**/*.{scss,sass}')
       ], ['sass']);
+      // CSS
+      gulp.watch([
+        path.join(dirs.source, dirs.styles, '**/*.{css}'),
+        path.join(dirs.source, dirs.modules, '**/*.{css}')
+      ], ['copy']);
 
       // Jade Templates
       gulp.watch([

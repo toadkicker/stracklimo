@@ -4,19 +4,39 @@
   .caption {
     bottom: 0;
     left: 0;
-    margin-top: 13.5%;
-    padding: 4rem;
+    //@include media("<=tablet") {
+    margin-top: $navbar-height;
+    //}
+    //@include media(">tablet") {
+    //  margin-top: 13.5%;
+    //}
+    //@include media(">desktop") {
+    //  margin-top: 20%;
+    //}
+    padding: 2rem 4rem;
     position: absolute;
     right: 0;
     top: 0;
   }
   .title, .btn {
     font-family: $raleway;
-    color: $carousel-caption-color;
-    text-shadow: $carousel-text-shadow;
   }
   .title {
-    font-size: 6.5rem;
+    color: $black;
+  }
+  .btn {
+    background-color: rgba(0, 0, 0, .8);
+    color: $white;
+  }
+  .title {
+    @include media('>=tablet') {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+    }
+    @include media('>desktop') {
+      font-size: 10rem;
+      line-height: 10rem;
+    }
   }
 }
 

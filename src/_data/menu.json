@@ -3,7 +3,23 @@
     "name": "About",
     "link": "/about",
     "category": "Page",
-    "status": "Development"
+    "status": "Development",
+    "subitems": [
+      {
+        "name": "Meet the CEO",
+        "link": "/about",
+        "category": "Page",
+        "status": "Development",
+        "divider": false
+      },
+      {
+        "name": "Meet your Chauffeurs",
+        "link": "/about/chauffeurs",
+        "category": "Page",
+        "status": "Development",
+        "divider": false
+      }
+    ]
   },
   {
     "name": "Fleet",
@@ -15,7 +31,30 @@
     "name": "Services",
     "link": "/services",
     "category": "Page",
-    "status": "Development"
+    "status": "Development",
+    "subitems": [
+      {
+        "name": "Services Overview",
+        "link": "/services",
+        "category": "Page",
+        "status": "Development",
+        "divider": false
+      },
+      {
+        "name": "Tours & Special Events",
+        "link": "/services/tours-special-events",
+        "category": "Page",
+        "status": "Development",
+        "divider": false
+      },
+      {
+        "name": "Group & Executive Travel",
+        "link": "/services/group-executive-travel",
+        "category": "Page",
+        "status": "Development",
+        "divider": false
+      }
+    ]
   },
   {
     "name": "App",

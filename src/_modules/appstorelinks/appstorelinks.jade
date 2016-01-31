@@ -1,0 +1,12 @@
+block config
+  - var baseUrl = "/"
+
+mixin appstorelinks(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  .row.row-centered.app-store-link-container
+    .col-centered.col-xs-12.col-sm-12.col-md-12
+      a.app-store-link(href="https://itunes.apple.com/us/app/strack-ground/id971362888?mt=8", target="_blank")
+        img(src=baseUrl + "images/app_store_badge.svg")
+      a.app-store-link(href="https://play.google.com/store/apps/details?id=com.groundwidgets.strack&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1", target="_blank")
+        img(alt="Get it on Google Play", src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png")

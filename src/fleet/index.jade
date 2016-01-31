@@ -3,6 +3,28 @@ extends ../_layouts/parallax
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
+  - var active = 'Fleet'
 
 block content
-  p fleet page
+  .row
+    .col-xs-12
+      img.img-responsive(src="/images/Lincoln MKS Ext.jpg")
+
+  .row.row-centered
+    .col-xs-12
+      h1 Meet your fleet
+      h3 Extensive. Luxurious. Dependable.
+  each item in site.data.fleet
+    .row.border-top.black
+      .container
+        .row
+          .col-xs-4
+            h4.title
+              = item.name
+            p Sedan
+            ul
+              li Complimentary Water
+              li Onboard Wi-Fi
+            a.btn.btn-default(href="/reservations") Book This Ride
+          .col-xs-8
+            img.img-responsive(src="#{item.image.url}")

@@ -1,22 +1,36 @@
 // Base configuration
 @import '../libs/normalize-css/normalize.css';
 @import '../libs/include-media/dist/include-media';
-@import 'variables';
 @import 'typography';
+@import 'variables';
 @import '../libs/font-awesome/scss/font-awesome';
-@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
+@import '../libs/bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'animate';
 @import 'zindex';
-@import "parallax";
+@import 'parallax';
 // Normalize Styles
 @import url($ga-font-path);
-
 // Import Modules
+@import '../_modules/appstorelinks/appstorelinks';
 @import '../_modules/link/link';
 @import '../_modules/footer/footer';
 @import '../_modules/header/header';
 @import '../_modules/carousel/carousel';
 @import '../_modules/navbar/navbar';
+
+/* centered columns styles */
+.row-centered {
+  text-align: center;
+}
+
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px;
+}
 
 // Box sizing partial styles:
 // Apply a natural box layout model to all elements
@@ -58,18 +72,127 @@
 
 body #main {
   color: $white;
+  .row.border-top {
+    border-top: 1px solid $black;
+    &.tour {
+      padding: 4rem;
+    }
+  }
   .black {
     color: $black;
   }
   button.btn.btn-strack, a.btn.btn-strack {
     -webkit-appearance: none;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     border: 1px solid $black;
     display: block;
+    font-family: "Raleway Bold", sans-serif;
+    color: white;
+    @include media('<tablet') {
+      font-size: 1.5rem;
+    }
+    @include media('>desktop') {
+      font-size: 2.5rem;
+    }
     text-transform: uppercase;
   }
 
   .center-xs {
     text-align: center;
   }
+
+  .gray-bg {
+    background-color: $dark-gray;
+    p.lead {
+      margin: 8.88rem 2.22rem;
+      text-align: right;
+    }
+  }
+  #hero-unit.row {
+    margin-top: $navbar-height;
+    #quote {
+      align-items: center;
+      display: flex;
+      flex-flow: column;
+      height: 50rem;
+      justify-content: center;
+    }
+    p.quote {
+      font-family: "Raleway Light", "Raleway", sans-serif;
+      font-size: 3rem;
+    }
+  }
+  #about {
+    @include media(">tablet") {
+      margin: 4rem;
+    }
+    @include media(">phone", "<tablet") {
+      margin: 2rem;
+    }
+  }
+  #services {
+    text-align: center;
+  }
+  a.service-link {
+    background-clip: padding-box;
+    color: $black;
+    display: block;
+    font-size: 4rem;
+    height: 280px;
+    line-height: 260px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease;
+    width: 480px;
+    &:hover {
+      color: $gray;
+    }
+  }
+  .app-cta {
+    img.screenshot {
+      margin: 0 auto;
+    }
+  }
+  #app {
+    margin: $navbar-height 0;
+    a.app-store-link {
+      @include media('>=desktop') {
+        height: 40px;
+        width: 135px;
+      }
+      display: inline-block;
+      padding: .3em;
+      img {
+        @include media('<=desktop') {
+          height: calc(40px * 2/3);
+          width: calc(135px * 2/3);
+        }
+        @include media('>=desktop') {
+          height: 40px;
+          width: 135px;
+        }
+      }
+    }
+  }
+  a.special-occasions {
+    background: url('/images/services/special-occasions.png') no-repeat 50% 50%;
+  }
+  a.group-transport {
+    background: url('/images/services/group-transport.png') no-repeat 50% 50%;
+  }
 }
+
+.chauffeurs-img {
+  max-height: 15rem;
+}
+
+#app {
+  .align-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60rem;
+  }
+}
+

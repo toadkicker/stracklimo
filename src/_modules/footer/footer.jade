@@ -23,14 +23,21 @@ mixin footer(spec)
 
     .col-xs-4
       h4.text-uppercase Contact Us
-      p
-        a(href="tel://888.781.5466")
-          |888.781.5466
-      p.text-uppercase E-MAIL RESERVATION
-      p.text-uppercase careers
+      p.lead
+        a(href="tel://1-888-781-5466")
+          | 888.781.5466
+      p.lead.text-uppercase E-MAIL RESERVATION
+      p.lead.text-uppercase careers
     .col-xs-4
       h4.text-uppercase Get the App
-      p
-        img(src="/images/app_store_badge.svg" style="height: 24px;")
-        |&nbsp;
-        img(src="/images/en-play-badge.png" style="height: 24px;")
+
+      +appstorelinks
+  .row.text-center
+    .col-xs-6
+      p.lead.small &reg; 2015 All Rights Reserved.
+    .col-xs-6
+      p.lead.small
+        +link(href="/terms") Terms &amp; Conditions
+        span &nbsp;|&nbsp;
+        +link(href="/privacy") Privacy Policy
+

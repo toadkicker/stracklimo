@@ -1,0 +1,27 @@
+extends ../../_layouts/parallax
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../../'
+  - var active = "About your Chauffeurs";
+
+block content
+  .row.gray-bg
+    .col-xs-12.col-md-12
+      img.img-responsive(src='/images/about/chauffeurs/hero-unit.png', class='hero-unit')
+  .row.black.text-center
+    .col-xs-12
+      h1 Our Strack Quality Chauffeur Team
+      h3 Introducing the best chauffeurs in the business.
+      p.lead Criminal background and security check by a certified agency or equivalent
+      p.lead Pre-hire drug testing and random testing program, when required by USDOT
+      p.lead Driver training program that includes driver duties, customer service, safety and defensive driving skills
+      p.lead Certified medical examination, as required by local, state and federal regulations
+      p.lead Proper supervision, retraining and discipline when appropriate
+
+  .chauffuers.row.black.text-center
+    each driver in site.data.drivers
+      .col-lg-3.col-sm-4.col-xs-6
+        .thumbnail
+          img.chauffeurs-img.img-responsive(src="#{baseUrl + driver.url}")
+          = driver.name

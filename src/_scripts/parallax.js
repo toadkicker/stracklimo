@@ -10,8 +10,11 @@
       $(document).scroll(function() {
         scroll_start = $(this).scrollTop();
         if(scroll_start > offset.top) {
-          $(".navbar").css('background-color', 'rgba(0,0,0,1)');
+          $(".navbar .item").css('color', 'black');
+          $(".navbar").css('background-color', 'rgba(0,0,0,0.3)');
+
         } else {
+          $(".navbar .item").css('color', 'white');
           $('.navbar').css('background-color', 'rgba(0,0,0,0.8)');
         }
       });

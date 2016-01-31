@@ -13,7 +13,6 @@ a:visited {
 // mouse over link
 a:hover {
   color: lighten($brand-primary, 13.5%);
-  @include transition();
 }
 
 // selected link

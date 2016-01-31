@@ -1,8 +1,16 @@
 // footer styles
-.footer {
+#footer, .footer {
   background-color: $black;
+}
+
+.footer {
   height: 30rem;
-  padding: 13.5% 1rem 0 1rem;
+  @include media("<desktop") {
+    padding: 13.5% 1rem 0 1rem;
+  }
+  @include media(">desktop") {
+    padding: 7.5% 1rem 0 1rem;
+  }
   h4.text-uppercase {
     font-family: $raleway;
   }

@@ -1,9 +1,9 @@
 [{
   "active": true,
   "image": {
-    "url": "/images/sunset-car.png",
+    "url": "/images/sunset-car.jpg",
     "alt": "Sunset Cadilac",
     "class": "hero-carousel"
   },
-  "caption": "<div class='row'><div class='col-xs-4 col-md-6'><h1 class='title'>Now You've Arrived</h1><div class='btn-group'><a href='#' class='btn btn-strack'>Book your reservation</a></div></div><div class='col-xs-8 col-md-6 center-xs middle-xs'><iframe width='480' height='315' src='https://www.youtube.com/embed/JwTU4JS1kso' frameborder='0' allowfullscreen></iframe></div></div>"
+  "caption": "<div class='row black'><div class='col-xs-12 col-sm-4 col-md-6'><h1 class='title'>Now</h1><h1 class='title'>You've </h1><h1 class='title'>Arrived</h1><div class='btn-group'><a href='#' class='btn btn-strack'>Book your reservation</a></div></div><div class='hidden-xs col-sm-8 col-md-6 center-xs middle-xs'><iframe width='480' height='315' src='https://www.youtube.com/embed/JwTU4JS1kso' frameborder='0' allowfullscreen></iframe></div></div>"
 }]

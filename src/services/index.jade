@@ -3,6 +3,24 @@ extends ../_layouts/parallax
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
+  - var active = "Services"
 
 block content
-  p services page
+  #hero-unit.row.row-centered(style="padding-top: 10rem")
+    .col-xs-12
+      img.img-responsive(src='/images/services/hero-unit.jpg')
+  #services.row.black
+    .col-xs-12.text-center
+      h1 Strack Worldwide
+      h3 Our mission is to make traveling easier and more productive for our guests.
+      p.lead From Los Angeles to Hong Kong and everywhere in between, Strack Ground provides you with seamless transportation worldwide.
+      p.lead Whether we are transporting one person or 500, we can accommodate your needs with the latest luxury driven vehicles, onboard Wi-Fi and complimentary bottled water.
+      p.lead How we can make your travels easier and more productive around the world?
+
+  .row.row-centered
+    .col-xs-6.col-centered
+      p
+        a.service-link.special-occasions(href="/reservations") Special Occasions
+    .col-xs-6.col-centered
+      p
+        a.service-link.group-transport(href="/reservations") Group Transport
