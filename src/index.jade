@@ -32,11 +32,11 @@ block content
       .carousel-inner.text-center(role="listbox")
         each item in site.data.fleet
           if item.active
-            .item.active
+            .item.active.text-center
               img(src=item.image.url, alt=item.image.alt, class=item.image.class)
               .carousel-caption !{item.caption}
           else
-            .item
+            .item.text-center
               img(src=item.image.url, alt=item.image.alt)
               .carousel-caption !{item.caption}
       // Controls
