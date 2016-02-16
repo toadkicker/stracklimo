@@ -74,6 +74,7 @@ body #main {
   color: $white;
   .row.border-top {
     border-top: 1px solid $black;
+    padding: 2rem 0;
     &.tour {
       padding: 4rem;
     }
@@ -85,9 +86,10 @@ body #main {
     -webkit-appearance: none;
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid $black;
+    color: white;
     display: block;
     font-family: "Raleway Bold", sans-serif;
-    color: white;
+    padding: 1rem 2rem;
     @include media('<tablet') {
       font-size: 1.5rem;
     }
@@ -108,13 +110,23 @@ body #main {
       text-align: right;
     }
   }
+  .ceo #quote {
+    margin-right: 40px;
+    margin-top: $navbar-height + 25px;
+    text-align: right;
+    .quote {
+      padding: 1rem;
+    }
+  }
+  .ceo img.hero-unit{
+    padding-top: 12rem;
+  }
   #hero-unit.row {
-    margin-top: $navbar-height;
     #quote {
       align-items: center;
       display: flex;
       flex-flow: column;
-      height: 50rem;
+      //height: 50rem;
       justify-content: center;
     }
     p.quote {
@@ -164,14 +176,8 @@ body #main {
       display: inline-block;
       padding: .3em;
       img {
-        @include media('<=desktop') {
-          height: calc(40px * 2/3);
-          width: calc(135px * 2/3);
-        }
-        @include media('>=desktop') {
-          height: 40px;
-          width: 135px;
-        }
+        height: 40px;
+        width: 135px;
       }
     }
   }
@@ -184,7 +190,7 @@ body #main {
 }
 
 .chauffeurs-img {
-  max-height: 15rem;
+  max-height: 25rem;
 }
 
 #app {
@@ -196,3 +202,16 @@ body #main {
   }
 }
 
+.btn {
+  text-transform: uppercase;
+  &.btn-default {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #fff;
+    padding: 1rem 5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $black;
+    }
+  }
+}

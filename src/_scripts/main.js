@@ -13,6 +13,7 @@ import Carousel from '../_modules/carousel/carousel';
 import Footer from '../_modules/footer/footer';
 
 jQuery(() => {
+  new Navbar();
   new Link(); // Activate Link modules logic
   new Header(); // Activate Header modules logic
   new Footer(); // Activate Footer modules logic

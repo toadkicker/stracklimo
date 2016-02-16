@@ -1,4 +1,22 @@
-@import "bootstrap-additions.css";
+@import 'bootstrap-additions';
+
+body {
+  overflow-x: hidden;;
+}
+
+.gray {
+  color: $dark-gray;
+}
+
+.row-eq-height {
+  display: table;
+}
+
+.row-eq-height [class*="col-"] {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+}
 
 @mixin content-block($background: #eee) {
   margin-bottom: 0;
@@ -29,13 +47,16 @@
   padding: 1rem 0;
 }
 
+.lead {
+  font-weight: 400;
+}
+
 .hero-block-one {
   @include content-block($black);
 }
 
 .hero-space-one {
-  @include content-space(url("/images/sunset-car.jpg"));
-  padding-left: 4rem;
+  @include content-space(url('/images/sunset-car.jpg'));
   padding-bottom: 6rem;
   .title:first-child, #video {
     padding-top: $navbar-height;
@@ -45,7 +66,7 @@
     font-size: 10rem;
   }
   .btn {
-    font-family: "Raleway Bold", sans-serif;
+    font-family: 'Raleway Bold', sans-serif;
   }
   .btn:hover {
     color: $white;
@@ -54,7 +75,7 @@
     align-items: center;
     display: flex;
     flex-flow: column;
-    height: 50rem;
+    height: 55rem;
     justify-content: center;
   }
   figure {
@@ -64,22 +85,22 @@
     display: flex;
   }
 
-  figure button[name="play"] {
+  figure button[name='play'] {
     width: 150px;
     height: 150px;
-    background: rgba(184,184,184, 0.3);
-    border: 1px solid rgb(184,184,184);
+    background: rgba(184, 184, 184, 0.3);
+    border: 1px solid rgb(184, 184, 184);
     border-radius: 100%;
     margin: auto;
     cursor: pointer;
   }
-  figure button[name="play"]:focus {
+  figure button[name='play']:focus {
     outline: 0;
     border: 1px solid hsl(210, 58%, 69%);
     box-shadow: 0 0 0 3px hsla(210, 76%, 57%, 0.5);
   }
 
-  figure button[name="play"]::after {
+  figure button[name='play']::after {
     content: '';
     display: inline-block;
     position: relative;
@@ -94,8 +115,15 @@
 .content-block-one {
   @include content-block($black);
   .carousel-caption {
+    right: 0;
+    width: 50%;
+    top: 5rem;
+    left: 50%;
+    text-align: left;
+    margin-left: 4rem;
     h3 {
-      font-size: 4rem;
+      font-size: 5rem;
+      display: inline-flex;
     }
   }
 }
@@ -107,6 +135,7 @@
 .content-space-one, .content-space-three {
   @include content-space($background: url('/images/LeatherHoles-Plain.png') no-repeat center center fixed);
   h1.title {
+    font-size: 6rem;
     margin: 3.5rem 0;
   }
   p.lead {
@@ -115,14 +144,19 @@
 }
 
 .content-space-three {
-  @include media('>tablet') {
-    height: 35rem;
+  @include media('>=tablet') {
+    height: 55rem;
+  }
+  @include media('<tablet') {
+    height: 84rem;
   }
   padding: 6rem 2rem;
   ul {
-    font-size: 12px;
-    list-style: none;
+    //list-style: none;
     white-space: pre-line;
+    @include media('<tablet') {
+      padding-bottom: 0;
+    }
   }
   .left {
     @include media('>tablet') {
@@ -137,14 +171,18 @@
 }
 
 .content-space-four {
-  @include content-space($background: #FFF);
-  img.redcarpet {
-    @include media("<desktop") {
-      height: 35rem;
-    }
-    @include media(">desktop") {
-      height: 75rem;
-    }
+  @include content-space($background: transparent url('/images/ai/redcarpet.png') no-repeat bottom left);
+  padding-bottom: 0;
+  @include media("<600px") {
+    background-image: none;
+  }
+  @include media('<desktop') {
+    height: 55rem;
+    background-size: 75%;
+  }
+  @include media('>=desktop') {
+    height: 75rem;
+    background-size: contain;
   }
 }
 
@@ -156,19 +194,28 @@
 .content-space-six {
   @include content-space($background: #FFF);
   @include media('>phone') {
-    background-image: url('/images/vehiclepictures/party_bus.png');
+    background-image: url('/images/vehiclepictures/comvan.png');
     background-size: 50%;
     background-repeat: no-repeat;
-    background-position: bottom left;
-    background-position-y: 10rem; /*hack*/
+    background-position: 0 105px;
   }
   @include media('<=767px') {
     background: #FFF;
     text-align: center;
   }
-  height: 35em;
+  height: 28em;
   @include media('>phone', '<=tablet') {
     height: auto;
+  }
+  .medium {
+    color: $gray;
+    font-size: 2rem;
+    @include media('>phone', '<=desktop') {
+      font-size: 1.5rem;
+    }
+  }
+  .padding-bottom {
+    padding-bottom: 3rem;
   }
 }
 
@@ -177,26 +224,38 @@
   @include media('>=320px') {
     height: 60rem;
   }
+  @include media('>=tablet') {
+    height: 66rem;
+  }
   @include media('<=tablet') {
-    height: 40rem;
+    height: 55rem;
   }
-  @include media(">=tablet") {
-    height: 50rem;
-  }
-  @include media(">=desktop") {
+  @include media('>=desktop') {
     height: 70rem;
   }
   height: 40rem;
+  #app-screenshots {
+    @include media('>=800px') {
+      background-image: url('/images/appscreens/responsive.png');
+      background-position: bottom left;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 55rem;
+      @include media('<=tablet') {
+        height: 40rem;
+      }
+    }
+  }
   .app-screenshot-cta {
     @extend .col-centered;
-    @include media("<desktop") {
-      margin: 0 7rem;
-    }
-    @include media('>=desktop') {
-      margin: 0 24rem;
-    }
-    @include media("<=phone") {
-      margin: 0 3.5rem;
+    //@include media('<desktop') {
+    //  margin: 0 7rem;
+    //}
+    //@include media('>=desktop') {
+    //  margin: 0 24rem;
+    //}
+    @include media('<=phone') {
+      //margin: 0 3.5rem;
       ul {
         font-size: 1.5rem;
       }
@@ -211,9 +270,9 @@
         font-size: 1.5rem;
       }
     }
-    @include media(">=tablet") {
+    @include media('>=tablet') {
     }
-    @include media(">=desktop") {
+    @include media('>=desktop') {
       position: absolute;
       margin-left: 32rem;
       max-width: 64rem;
@@ -231,7 +290,7 @@
       @include media('<=tablet', '>=tablet') {
         margin-left: 0;
       }
-      @include media(">=desktop") {
+      @include media('>=desktop') {
         margin-left: 24rem;
       }
     }
@@ -254,4 +313,45 @@
   height: 3px;
   margin: 0 auto;
   width: 50%;
+}
+
+.icon {
+  background-image: url('/images/icons/icons.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3.25rem;
+  width: 4rem;
+  display: inline-block;
+  &.icon-wine {
+    background-position: 0 -39px;
+  }
+  &.icon-star {
+    background-position: 0 0;
+  }
+  &.icon-museum {
+    background-position: 0 -70px;
+  }
+  &.icon-shop {
+    background-position: 0 -106px;
+  }
+}
+
+.fa-wine-glass {
+  background: url('/images/icons/drink-icon.gif') no-repeat center center;
+  height: 3rem;
+  width: 2.5rem;
+  background-size: contain;
+}
+
+#exec-travel {
+  background: url('/images/exec header.png') no-repeat 0 0;
+  background-size: cover;
+  height: 80rem;
+  @include media('<desktop') {
+    height:65rem;
+  }
+  @include media('<tablet') {
+    height:55rem;
+  }
+  margin-bottom: 4rem;
 }

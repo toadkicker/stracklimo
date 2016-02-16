@@ -43,7 +43,7 @@ $black: hsl(0, 0%, 0%);
 $dark-blue: darken($blue, 25%);
 $slide-distance: 100;
 $slide-duration: .4s;
-$gray: #666;
+$gray: #868686;
 $light-gray: lighten($gray, 25%);
 $dark-gray: darken($gray, 25%);
 $gray-base:             #000 !default;
@@ -146,7 +146,7 @@ $grid-gutter-width: 0;
 $navbar-inverse-bg: rgba(0,0,0,.8);
 $navbar-height: 115px;
 
-$dropdown-bg: rgba(0,0,0,0.3);
+$dropdown-bg: rgba(0,0,0,0.8);
 $dropdown-fallback-border: $black; // IE8 fallback
 $dropdown-border: $black;
 $dropdown-link-color: $white;

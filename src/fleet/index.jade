@@ -6,23 +6,24 @@ block config
   - var active = 'Fleet'
 
 block content
-  .row
+  #fleet.row.black
     .col-xs-12
       img.img-responsive(src="/images/Lincoln MKS Ext.jpg")
 
-  .row.row-centered
+  .row.row-centered.black
     .col-xs-12
       h1 Meet your fleet
       h3 Extensive. Luxurious. Dependable.
   each item in site.data.fleet
-    .row.border-top.black
+    .row.border-top
       .container
-        .row
+        .row.black
           .col-xs-4
             h4.title
               = item.name
-            p Sedan
-            ul
+            span.lead.small
+              = item.type
+            ul.list-plain(style="padding-top: 2rem")
               li Complimentary Water
               li Onboard Wi-Fi
             a.btn.btn-default(href="/reservations") Book This Ride

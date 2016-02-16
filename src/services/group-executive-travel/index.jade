@@ -5,21 +5,25 @@ block config
   - var active = "Services"
 
 block content
+  div#exec-travel.hero
   #hero-unit.row.black
     .col-xs-12.text-center
       h1.title Executive Shuttle and Group Transportation
-
-  each tour in site.data.grouptravel
-    .row.black.border-top.tour
-      .col-xs-12
-        .container
-          .row
-            .col-xs-6
-              h3
-                = tour.title
-              p.lead
-               = tour.description
-              a.btn.btn-default(role="button", href="/reservations") Reserve
-            .col-xs-6
-              .thumbnail
-                img.img-responsive(src="#{baseUrl + tour.image.url}", alt="#{tour.title}")
+  .row
+    .container
+      each tour in site.data.grouptravel
+        .row.gray.border-top.tour
+          .col-xs-12
+            .container
+              .row
+                .col-xs-6
+                  h3
+                    = tour.title
+                  span(style="padding-bottom: 3rem")
+                   = tour.description
+                  br
+                  a.btn.btn-default(role="button", href="/reservations",style="margin-top: 3rem") Reserve
+                .col-xs-6
+                  .thumbnail
+                    img.img-responsive(src="#{baseUrl + tour.image.url}", alt="#{tour.title}")
+      .row.border-top

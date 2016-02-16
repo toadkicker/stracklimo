@@ -7,17 +7,11 @@
     var startchange = $('#startchange');
     var offset = startchange.offset();
     //$('body').removeClass('out').addClass('in');
+
+    //make it shrink
     if (startchange.length){
       $(document).scroll(function() {
         scroll_start = $(this).scrollTop();
-        if(scroll_start > offset.top) {
-          $(".navbar .item").css('color', 'black');
-          $(".navbar").css('background-color', 'rgba(0,0,0,0.3)');
-
-        } else {
-          $(".navbar .item").css('color', 'white');
-          $('.navbar').css('background-color', 'rgba(0,0,0,0.8)');
-        }
       });
     }
   });

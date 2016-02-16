@@ -1,10 +1,56 @@
 // navbar styles
 .navbar {
-  margin-bottom: 0;
-  font-family: "Raleway Bold", "Raleway", sans-serif;
   color: $gray-lighter;
+  font-family: $raleway;
+  margin-bottom: 0;
+  will-change: transform;
+  a {
+    font-size: 1.5rem;
+    @include media('<=desktop') {
+      font-size: 1.25rem;
+    }
+    @include media('<=tablet') {
+      font-size: 1.5rem;
+    }
+  }
+  .dropdown-menu a {
+    color: $gray;
+  }
+  &.shrink {
+    height: 35px;
+    min-height: 70px;
+    .navbar-brand {
+      font-size: 25px;
+    }
+    a {
+      padding-bottom: 2rem !important;
+      padding-top: 2rem !important;
+      transition: all 0.3s ease;
+    }
+    .navbar-toggle {
+      margin: 8px 15px 8px 0;
+      padding: 4px 5px;
+    }
+    .navbar-brand {
+      height: inherit;
+    }
+    .item:not([href="/reservations"]) {
+      margin: 2rem .25rem !important;
+      padding: .5rem .25rem !important;
+    }
+    .item[href="/reservations"] {
+      margin: 2rem 1rem;
+      display: inline-table;
+      border-collapse: collapse;
+      line-height: 3rem;
+      width: 15rem;
+      text-align: center;
+    }
+  }
   .item {
     text-transform: uppercase;
+  }
+  .item:not([href="/reservations"]) {
     transition: all .5s ease;
     @include media(">tablet") {
       padding: 1rem .25rem;
@@ -14,6 +60,8 @@
   }
   .item[href="/reservations"] {
     border: 2px solid $gray;
+    padding: 1rem;
+    margin: 3.75rem 1rem;
     &:hover {
       @extend .active;
     }
@@ -31,14 +79,26 @@
 
   .brand {
     @include media('<desktop') {
-      padding-left: 2rem;
+      //padding-left: 2rem;
       padding-top: 4rem;
     }
     @include media('>desktop') {
-      padding-left: 4rem;
+      //padding-left: 4rem;
       padding-top: 4rem;
     }
   }
+}
+
+.caret-up {
+  width: 0;
+  height: 0;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid;
+
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: middle;
 }
 
 img.text {

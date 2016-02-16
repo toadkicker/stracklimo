@@ -34,10 +34,12 @@ mixin footer(spec)
       +appstorelinks
   .row.text-center
     .col-xs-6
-      p.lead.small &reg; 2015 All Rights Reserved.
+      small &reg; Copyright
+        span#year
+        |  All Rights Reserved.
     .col-xs-6
-      p.lead.small
+      small
         +link(href="/terms") Terms &amp; Conditions
-        span &nbsp;|&nbsp;
+        span.gray &nbsp;|&nbsp;
         +link(href="/privacy") Privacy Policy
 

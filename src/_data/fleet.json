@@ -2,101 +2,111 @@
   {
     "active": true,
     "name": "Cadillac XTS",
+    "type": "Sedan",
     "image": {
       "url": "/images/home/carousel/Cadillac XTS.jpg",
       "alt": "Sunset Cadilac",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>Meet your fleet</h1>"
+    "caption": "<h3 class='title'>Meet your fleet</h1>"
   },
   {
     "active": false,
     "name": "Escalade",
+    "type": "Sport Utility Vehicle",
     "image": {
       "url": "/images/home/carousel/Escalade.jpg",
       "alt": "Escalade XTS",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Accommodating</h1>"
+    "caption": "<h3 class='title'>All Accommodating</h1>"
   },
   {
     "active": false,
     "name": "Ford Transit",
+    "type": "Passenger Van",
     "image": {
       "url": "/images/home/carousel/Ford Transit.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h1>"
   },
   {
     "active": false,
     "name": "GMC Denali XL",
+    "type": "Sport Utility Vehicle",
     "image": {
       "url": "/images/home/carousel/GMC Denali XL.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h1>"
   },
   {
     "active": false,
     "name": "Lincoln MKS",
+    "type": "Sedan",
     "image": {
       "url": "/images/home/carousel/Lincoln MKS.jpg",
-      "alt": "Ford Transit",
+      "alt": "Lincoln MKS",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h3>"
   },
   {
     "active": false,
     "name": "Mercedes S550",
+    "type": "Sedan",
     "image": {
       "url": "/images/home/carousel/Mercedes S550.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h1>"
   },
   {
     "active": false,
     "name": "Mercedes Sprinter Van",
+    "type": "Passenger Van",
     "image": {
       "url": "/images/home/carousel/Mercedes Sprinter Van.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h1>"
   },
   {
     "active": false,
     "name": "Mini Coach 29 PAx",
+    "type": "Passenger Van",
     "image": {
       "url": "/images/home/carousel/Mini Coach 29 PAx.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h1>"
   },
   {
     "active": false,
     "name": "Mini Coach 38 PAx",
+    "type": "Passenger Van",
     "image": {
       "url": "/images/home/carousel/Mini Coach 38 PAXjpg.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h1>"
   },
   {
     "active": false,
     "name": "Motor Coach",
+    "type": "Passenger Van",
     "image": {
       "url": "/images/home/carousel/Motor Coach.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
-    "caption": "<h3 class=''>All Aboard!</h1>"
+    "caption": "<h3 class='title'>All Aboard!</h1>"
   }
 ]

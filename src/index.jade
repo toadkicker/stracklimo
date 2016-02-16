@@ -18,16 +18,13 @@ block content
   .hero-block-one
   .row.content-space-one
     .text-center.col-xs-12(style="padding: 4rem")
-      h1.title Luxury at every turn
-      p.lead From Los Angeles to Hong Kong and everywhere in between, Strack provides you with seamless transportation worldwide. Whether we are transporting one person or 500, we accommodate your needs with the latest luxury driven vehicles, onboard Wi-Fi and complimentary bottled water.
-      p
-        img.logo(src= baseUrl + "images/ai/logo.svg", alt="Strack Ground Logo", height="75")
+      .container
+        h1.title Luxury at every turn
+        p.lead From Los Angeles to Hong Kong and everywhere in between, Strack provides you with seamless transportation worldwide. Whether we are transporting one person or 500, we accommodate your needs with the latest luxury driven vehicles, onboard Wi-Fi and complimentary bottled water.
+        p
+          img.logo(src= baseUrl + "images/ai/logo.svg", alt="Strack Ground Logo", height="75")
   .row.content-block-one.row-centered
-    #carousel-fleet.col-xs-12.carousel.slide.col-centered(data-ride="carousel")
-      // Indicators
-      ol.carousel-indicators
-        each item, index in site.data.fleet
-          li(class="#{item.active ? 'active' : ''}", data-target="#carousel-fleet", data-slide-to="#{index}")
+    #carousel-fleet.col-xs-12.carousel.slide.col-centered.carousel-fade(data-ride="carousel")
       // Wrapper for slides
       .carousel-inner.text-center(role="listbox")
         each item in site.data.fleet
@@ -39,78 +36,89 @@ block content
             .item.text-center
               img(src=item.image.url, alt=item.image.alt)
               .carousel-caption !{item.caption}
-      // Controls
-      a.left.carousel-control(href="#carousel-fleet", role="button", data-slide="prev")
-        i.fa.fa-chevron-circle-left(aria-hidden="true")
-        span.sr-only Previous
+        ol.carousel-indicators
+          each item, index in site.data.fleet
+            li(class="#{item.active ? 'active' : ''}", data-target="#carousel-fleet", data-slide-to="#{index}")
+        a.left.carousel-control(href="#carousel-fleet", role="button", data-slide="prev")
+          i.fa.fa-chevron-circle-left(aria-hidden="true")
+          span.sr-only Previous
 
-      a.right.carousel-control(href="#carousel-fleet", role="button", data-slide="next")
-        i.fa.fa-chevron-circle-right(aria-hidden="true")
-        span.sr-only Next
+        a.right.carousel-control(href="#carousel-fleet", role="button", data-slide="next")
+          i.fa.fa-chevron-circle-right(aria-hidden="true")
+          span.sr-only Next
   .row.content-space-two.row-centered.black
-    .col-centered.col-xs-12.col-sm-12.col-md-10
-      img.screenshots.img-responsive.pull-left.hidden-xs(src='/images/appscreens/responsive.png')
-      .wrap-around
-        h1.title An App that is going places
-        p.lead.hidden-xs Easily make reservations by the push of a button. We’ve designed our app to take the hassle out of booking your travel plans.
-        .app-screenshot-cta.row
-          .col-md-4.col-lg-4.col-sm-4.col-xs-4
-            img.app-icon.img-responsive(src="/images/appscreens/icon.png")
-          .col-md-8.col-lg-8.col-sm-8.col-xs-8
-            ul
-              li Real time updates
-              li Driver Locator
-              li Travel reservation history
-              li Instant Rate Quotes
-        +appstorelinks
+    .container
+      .row.row-centered
+        .col-xs-12
+          h1.title.text-center An App that is going places
+      #app-screenshots.row.gray
+        .col-xs-12.col-sm-6.col-sm-offset-6.col-md-6.col-md-offset-6
+          p.lead.hidden-xs Easily make reservations by the push of a button. We’ve designed our app to take the hassle out of booking your travel plans.
+          .app-screenshot-cta.row
+            .col-md-4.col-lg-4.col-sm-4.col-xs-4
+              img.app-icon.img-responsive(src="/images/appscreens/icon.png")
+            .col-md-8.col-lg-8.col-sm-8.col-xs-8
+              ul
+                li
+                  p.lead(style="margin-bottom: 0") Real time updates
+                li
+                  p.lead(style="margin-bottom: 0") Driver Locator
+                li
+                  p.lead(style="margin-bottom: 0") Travel reservation history
+                li
+                  p.lead(style="margin-bottom: 0") Instant Rate Quotes
+          +appstorelinks
   #service.row.content-space-three
     .text-center
-      h1 At Your Service
+      h1.title At Your Service
     .col-md-6.col-sm-6
-      ul.left
+      ul
         li 24-hour Live Customer Service Support
         li Integration With Your Travel Management Company
         li All-inclusive Rates, Including Taxes, Fuel, And Gratuity
         li Instant Email Confirmation With Reservations
     .col-md-6.col-sm-6
-      ul.right
+      ul
         li Real-time Alerts With Chauffeur Name And Cell Phone Number
         li Professionally Trained And Experienced Staff
         li GPS Tracking In All Company Vehicles
         li Flight Tracking For Prompt Airport Transfers
   .row.content-space-four.black
     .text-center
-      h1 Tours and Special Events
-    .hidden-xs.col-xs-5.col-md-6
-      img(src="/images/ai/redcarpet.png", class="redcarpet")
-    .col-xs-10.col-xs-offset-1.col-sm-5.col-md-5
-      p.lead From shopping to sightseeing and everything in between we have the tour to make your day.&nbsp;
+      h1.title Tours and Special Events
+    .col-xs-12.col-sm-6.col-sm-offset-6
+      p.lead.gray From shopping to sightseeing and everything in between we have the tour to make your day.&nbsp;
         a(href="/about") Learn More
-      ul.list-unstyled
+      ul.list-unstyled.gray(style="font-size: 16px")
         li
           p.lead
-            i.fa.fa-star
+            i.icon.icon-star
             | &nbsp;Hollywood and Los Angeles
         li
           p.lead
-            i.fa.fa-glass
+            i.icon.icon-wine
             | &nbsp;Micro Brew & Wine
         li
           p.lead
-            i.fa.fa-university
+            i.icon.icon-museum
             | &nbsp;Museum Row
         li
           p.lead
-            i.fa.fa-shopping-bag
+            i.icon.icon-shop
             | &nbsp;Shop Melrose and more
   .row.content-space-five
   .row.content-space-six.black
-    h1.text-center Executive Shuttle and Group Transportation
-    .col-sm-5.col-sm-offset-7.col-md-6.col-md-offset-6
-      p.lead Strack Ground offers the latest in Sedans to MotorCoaches paired with meeting staff and technology so transportation will no longer be a worry.
-    .col-sm-5.col-sm-offset-7.col-md-6.col-md-offset-6.col-centered
-      ul.text-left
-        li Convention Shuttles and Transfers
-        li Corporate Event and Shuttles
-        li Group Management Arrivals/Departures
-        li PowWow Smart Integration
+    .container
+      h1.title.text-center Executive Shuttle and Group Transportation
+      .col-sm-5.col-sm-offset-7.col-md-6.col-md-offset-6.gray.padding-bottom
+        span.medium Strack Ground offers the latest in Sedans to MotorCoaches paired with meeting staff and technology so transportation will no longer be a worry.
+      .col-sm-5.col-sm-offset-7.col-md-6.col-md-offset-6.col-centered.gray
+        ul.text-left(style="font-size: 16px")
+          li
+            span.medium Convention Shuttles and Transfers
+          li
+            span.medium Corporate Event and Shuttles
+          li
+            span.medium Group Management Arrivals/Departures
+          li
+            span.medium PowWow Smart Integration

@@ -23,10 +23,10 @@ mixin navbar(spec)
             - var hassubitems = (item.subitems && item.subitems.length > 0)
             - var isactive = (active == item.name)
             li(class='#{hassubitems ? "dropdown" : ""}')
-              +link(href=item.link,role="button",aria-haspopup="#{hassubitems}", aria-expanded="#{!hassubitems}",class='item #{hassubitems ? "dropdown-toggle" : ""} #{item.active ? "active" : ""} #{isactive ? "active" : ""}')
+              +link(href=item.link,role="button",aria-haspopup="#{hassubitems}", aria-expanded="#{!hassubitems}",class='item #{hassubitems ? "dropdown-toggle" : ""} #{item.active ? "active" : ""} #{isactive ? "active" : ""}', data-delay="1000")
                 = item.name
                 if hassubitems
-                  span.caret
+                  b.caret.caret-down
               if hassubitems
                 ul.dropdown-menu
                   each subitem in item.subitems

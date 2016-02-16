@@ -1,4 +1,35 @@
 // carousel styles
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      transition-property: opacity;
+    }
+
+    .item,
+    .active.left,
+    .active.right {
+      opacity: 0;
+    }
+
+    .active,
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+
+    .next,
+    .prev,
+    .active.left,
+    .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
 
 .carousel:not(#carousel-fleet) {
   .caption {
@@ -41,8 +72,17 @@
 }
 
 #carousel-fleet .item img {
-  max-height: 35rem;
   margin: 0 auto;
+  max-height: 35rem;
+}
+
+#carousel-fleet .carousel-indicators {
+  right: 0;
+  width: 50%;
+  top: 16rem;
+  left: 50%;
+  text-align: left;
+  margin-left: 4rem;
 }
 
 i.fa.fa-chevron-circle-left,

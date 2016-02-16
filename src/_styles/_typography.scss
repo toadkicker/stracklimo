@@ -4,6 +4,7 @@ $raleway: "Raleway";
 
 $font-family-sans-serif: $gotham;
 $font-family-serif: $raleway;
+$font-size-base: 16px;
 
 html {
   font-family: $gotham;
@@ -64,16 +65,20 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2rem;
   margin: 0 0 1rem;
 }
 
 h2 {
-  font-size: 1.5rem;
   margin: 1rem 0 2rem;
 }
 
 p {
   font-size: 1rem;
   margin: 1rem 0;
+}
+
+p.lead {
+  @include media('<desktop') {
+    font-size: 2rem;
+  }
 }

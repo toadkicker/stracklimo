@@ -1,11 +1,17 @@
 // appstorelinks styles
+.content-space-two
+.app-store-link-container {
+  float: none;
+  margin: 0 auto;
+}
+
 .app-store-link-container {
   @include media('>=desktop') {
     width: 50%;
   }
   @include media('<=tablet') {
     margin: 0 auto;
-    float:none;
+    float: none;
   }
   margin: 0 7rem;
   a.app-store-link {
@@ -16,14 +22,8 @@
     display: inline-block;
     padding: .3em;
     img {
-      @include media('<=desktop') {
-        height: calc(40px * 2/3);
-        width: calc(135px * 2/3);
-      }
-      @include media('>=desktop') {
-        height: 40px;
-        width: 135px;
-      }
+      height: 40px;
+      width: 135px;
     }
   }
 }
