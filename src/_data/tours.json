@@ -3,28 +3,28 @@
     "title": "Hollywood and Los Angeles",
     "description": "Be it a special event or a site seeing adventure, we will take you through tinsel town in style. You can relax and forget about the traffic and the hassle of parking. With Strack ground, a night on this town has never been so easy. Take in the sights and we’ll take care of the rest.",
     "image": {
-      "url": "images/Hollywood-Sign.jpg"
+      "url": "images/services/tours/hollywood.jpg"
     }
   },
   {
     "title": "Micro Brew & Wine",
     "description": "You’d be surprised how many high quality Micro breweries and Wineries are tucked away in LA and Orange County. Let us take you on a safe and care-free tour to some of LA and Orange Counties finest and best kept secrets. It’s is the perfect outing for true beer and wine aficionados.",
     "image": {
-      "url": "images/microbrews.png"
+      "url": "images/services/tours/beer.jpg"
     }
   },
   {
     "title": "Museum Row",
     "description": "Looking for the perfect way to take in some culture? Let us be your guide to to exploring LA’s world renowned Museums and Art Galleries. We can plan your day or customize it to your specific needs.",
     "image": {
-      "url": "images/mammoth.jpg"
+      "url": "images/services/tours/mammoth.jpg"
     }
   },
   {
     "title": "Shop Rodeo and Outlet Malls",
     "description": "From top designers to wholesale distributors, LA retail has it and it’s spread out all over the southland. Whether it’s Rodeo Drive, Melrose Blvd or the downtown diamond district, set out to shop till you drop and we’ll be there to pick you up.",
     "image": {
-      "url": "images/rodeo-drive.png"
+      "url": "images/services/tours/rodeo.jpg"
     }
   }
 ]

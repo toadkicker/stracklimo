@@ -12,6 +12,22 @@ body {
   display: table;
 }
 
+.light-gray {
+  color: $gray-lighter;
+}
+
+.tours .thumbnail {
+
+}
+
+.lead {
+  font-size: 2rem;
+  color: $gray;
+  &.white {
+    color: $white;
+  }
+}
+
 .row-eq-height [class*="col-"] {
   float: none;
   display: table-cell;
@@ -60,6 +76,9 @@ body {
   padding-bottom: 6rem;
   .title:first-child, #video {
     padding-top: $navbar-height;
+  }
+  &.title {
+    padding-bottom: 3rem;
   }
   .title {
     color: $black;
@@ -114,18 +133,6 @@ body {
 
 .content-block-one {
   @include content-block($black);
-  .carousel-caption {
-    right: 0;
-    width: 50%;
-    top: 5rem;
-    left: 50%;
-    text-align: left;
-    margin-left: 4rem;
-    h3 {
-      font-size: 5rem;
-      display: inline-flex;
-    }
-  }
 }
 
 .content-block-two {
@@ -135,7 +142,6 @@ body {
 .content-space-one, .content-space-three {
   @include content-space($background: url('/images/LeatherHoles-Plain.png') no-repeat center center fixed);
   h1.title {
-    font-size: 6rem;
     margin: 3.5rem 0;
   }
   p.lead {
@@ -173,6 +179,7 @@ body {
 .content-space-four {
   @include content-space($background: transparent url('/images/ai/redcarpet.png') no-repeat bottom left);
   padding-bottom: 0;
+  background-size: 75%;
   @include media("<600px") {
     background-image: none;
   }
@@ -182,7 +189,6 @@ body {
   }
   @include media('>=desktop') {
     height: 75rem;
-    background-size: contain;
   }
 }
 
@@ -336,6 +342,21 @@ body {
   }
 }
 
+.fleet-icon {
+  background-image: url('/images/icons/fleeticons.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 3.25rem;
+  width: 4rem;
+  &.passenger {
+    background-position: 7px 0;
+  }
+  &.usb {
+    background-position: -30px 0;
+  }
+}
+
 .fa-wine-glass {
   background: url('/images/icons/drink-icon.gif') no-repeat center center;
   height: 3rem;
@@ -343,15 +364,17 @@ body {
   background-size: contain;
 }
 
-#exec-travel {
-  background: url('/images/exec header.png') no-repeat 0 0;
-  background-size: cover;
-  height: 80rem;
-  @include media('<desktop') {
-    height:65rem;
+.btn.btn-transparent {
+  background: rgba(255,255,255,0.4);
+  font-weight: 600;
+  color: white;
+  &:visited {
+    color: white;
   }
-  @include media('<tablet') {
-    height:55rem;
+}
+
+#app {
+  .screenshot {
+    max-height: 520px;
   }
-  margin-bottom: 4rem;
 }

@@ -1,31 +1,45 @@
 extends ../_layouts/parallax
-
+//stack collapse w/ image on top
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
   - var active = 'Fleet'
 
 block content
-  #fleet.row.black
+  #fleet.row.black(style="padding-bottom:3rem")
     .col-xs-12
-      img.img-responsive(src="/images/Lincoln MKS Ext.jpg")
+      img.img-responsive(src="/images/hero/fleet-header.jpg")
 
   .row.row-centered.black
     .col-xs-12
       h1 Meet your fleet
       h3 Extensive. Luxurious. Dependable.
-  each item in site.data.fleet
-    .row.border-top
-      .container
-        .row.black
-          .col-xs-4
-            h4.title
+  .row(style="padding-bottom:3rem")
+
+  .row
+    .container
+      .col-md-12
+      each item in site.data.fleet
+        .row.black.border-top
+          .col-md-4.text-left
+            h3.title
               = item.name
-            span.lead.small
+            p.lead.small
               = item.type
             ul.list-plain(style="padding-top: 2rem")
-              li Complimentary Water
-              li Onboard Wi-Fi
-            a.btn.btn-default(href="/reservations") Book This Ride
-          .col-xs-8
+              each feature in item.features
+                li
+                  = feature
+            div(style="height:5rem;width:4rem;display:inline-block;")
+              i.fleet-icon.passenger
+              p.text-center.lead.black.small(style="font-size:1.25rem")
+                = item.passenger_size
+            div.small(style="height:5rem;width:4rem;display:inline-block;")
+              i.fleet-icon.usb
+              p.text-center.lead.black(style="font-size:1.25rem")
+                = item.usb
+            div(style="padding-top:2rem;")
+              a.btn.btn-default(href="/reservations") Book This Ride
+          .col-md-8.pull(style="margin-top: 4rem;")
             img.img-responsive(src="#{item.image.url}")
+      .row.border-top

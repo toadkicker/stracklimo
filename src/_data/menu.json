@@ -70,7 +70,7 @@
   },
   {
     "name": "Reservations",
-    "link": "/reservations",
+    "link": "https://apps.stracktransportation.com/default",
     "category": "Page",
     "status": "Development"
   }

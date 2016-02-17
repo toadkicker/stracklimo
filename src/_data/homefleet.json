@@ -6,7 +6,7 @@
     "passenger_size": "3",
     "usb": "3",
     "image": {
-      "url": "/images/fleet/Lincoln MKS.jpg",
+      "url": "/images/home/carousel/Lincoln MKS.jpg",
       "alt": "Lincoln MKS",
       "class": "img-responsive"
     },
@@ -20,7 +20,7 @@
     "passenger_size": "3",
     "usb": "3",
     "image": {
-      "url": "/images/fleet/cadillac.jpg",
+      "url": "/images/home/carousel/Cadillac XTS.jpg",
       "alt": "Cadillac XTS",
       "class": "img-responsive"
     },
@@ -30,11 +30,11 @@
   {
     "active": false,
     "name": "Mercedes S550",
-    "type": "Premium Sedan",
+    "type": "Sedan",
     "passenger_size": "3",
     "usb": "3",
     "image": {
-      "url": "/images/fleet/Mercedes S550.jpg",
+      "url": "/images/home/carousel/Mercedes S550.jpg",
       "alt": "Mercedes S550",
       "class": "img-responsive"
     },
@@ -46,10 +46,8 @@
     "active": false,
     "name": "Chevrolet Suburban",
     "type": "SUV",
-    "passenger_size": "6",
-    "usb": "6",
     "image": {
-      "url": "/images/fleet/Chevrolet Suburban.jpg",
+      "url": "/images/home/carousel/GMC Denali XL.jpg",
       "alt": "Chevrolet Suburban",
       "class": "img-responsive"
     },
@@ -63,7 +61,7 @@
     "passenger_size": "6",
     "usb": "6",
     "image": {
-      "url": "/images/fleet/cadillac escalade.jpg",
+      "url": "/images/home/carousel/Escalade.jpg",
       "alt": "Cadillac Escalade ESV",
       "class": "img-responsive"
     },
@@ -72,12 +70,12 @@
   },
   {
     "active": false,
-    "name": "Ford Transit Van",
+    "name": "Ford Transit",
     "type": "Van",
     "passenger_size": "11",
     "usb": "11",
     "image": {
-      "url": "/images/fleet/Ford Transit Van.jpg",
+      "url": "/images/home/carousel/Ford Transit.jpg",
       "alt": "Ford Transit",
       "class": "img-responsive"
     },
@@ -92,7 +90,7 @@
     "passenger_size": "13",
     "usb": "13",
     "image": {
-      "url": "/images/fleet/Mercedes Sprinter Van.jpg",
+      "url": "/images/home/carousel/Mercedes Sprinter Van.jpg",
       "alt": "Mercedes Sprinter Van",
       "class": "img-responsive"
     },
@@ -106,7 +104,7 @@
     "passenger_size": "29",
     "usb": "25",
     "image": {
-      "url": "/images/fleet/Mini Coach 29 Pax.jpg",
+      "url": "/images/home/carousel/Mini Coach 29 PAx.jpg",
       "alt": "Mini Coach 29 PAx",
       "class": "img-responsive"
     },
@@ -115,12 +113,12 @@
   },
   {
     "active": false,
-    "name": "Mini Coach 39 Pax",
+    "name": "Mini Coach 38 Pax",
     "type": "Mini Coach",
     "passenger_size": "38",
     "usb": "34",
     "image": {
-      "url": "/images/fleet/Mini Coach 39 Pax.jpg",
+      "url": "/images/home/carousel/Mini Coach 38 PAXjpg.jpg",
       "alt": "Mini Coach 38 PAx",
       "class": "img-responsive"
     },
@@ -134,7 +132,7 @@
     "passenger_size": "56",
     "usb": "56",
     "image": {
-      "url": "/images/fleet/Mini Coach 56 Pax.jpg",
+      "url": "/images/home/carousel/Motor Coach.jpg",
       "alt": "Motor Coach",
       "class": "img-responsive"
     },

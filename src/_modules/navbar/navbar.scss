@@ -1,4 +1,5 @@
 // navbar styles
+$grid-float-breakpoint: $screen-md;
 .navbar {
   color: $gray-lighter;
   font-family: $raleway;
@@ -16,6 +17,15 @@
   .dropdown-menu a {
     color: $gray;
   }
+  @media (max-width: 767px) {
+    &.navbar-inverse {
+      background-color: transparent;
+    }
+    .container
+    {
+      background-color:rgba(0,0,0,0.8);
+    }
+  }
   &.shrink {
     height: 35px;
     min-height: 70px;
@@ -28,8 +38,39 @@
       transition: all 0.3s ease;
     }
     .navbar-toggle {
-      margin: 8px 15px 8px 0;
-      padding: 4px 5px;
+      border: none;
+      background: transparent !important;
+
+      &:hover {
+        background: transparent !important;
+      }
+
+      .icon-bar {
+        width: 22px;
+        transition: all 0.2s;
+      }
+      .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      .middle-bar {
+        opacity: 0;
+      }
+      .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+    }
+    .navbar-toggle.collapsed {
+      .top-bar {
+        transform: rotate(0);
+      }
+      .middle-bar {
+        opacity: 1;
+      }
+      .bottom-bar {
+        transform: rotate(0);
+      }
     }
     .navbar-brand {
       height: inherit;
@@ -60,8 +101,8 @@
   }
   .item[href="/reservations"] {
     border: 2px solid $gray;
-    padding: 1rem;
-    margin: 3.75rem 1rem;
+    padding: 0.5rem;
+    margin: 4.25rem 1rem;
     &:hover {
       @extend .active;
     }

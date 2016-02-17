@@ -1,29 +1,24 @@
 extends ../../_layouts/parallax
-
 block config
   - var baseUrl = "../../"
   - var active = "Services"
 
 block content
   div#exec-travel.hero
+    img.img-responsive(src='/images/hero/exec-header.jpg')
   #hero-unit.row.black
     .col-xs-12.text-center
-      h1.title Executive Shuttle and Group Transportation
+      h1.title(style="padding: 4rem 0;") Executive Shuttle and Group Transportation
   .row
     .container
       each tour in site.data.grouptravel
         .row.gray.border-top.tour
-          .col-xs-12
-            .container
-              .row
-                .col-xs-6
-                  h3
-                    = tour.title
-                  span(style="padding-bottom: 3rem")
-                   = tour.description
-                  br
-                  a.btn.btn-default(role="button", href="/reservations",style="margin-top: 3rem") Reserve
-                .col-xs-6
-                  .thumbnail
-                    img.img-responsive(src="#{baseUrl + tour.image.url}", alt="#{tour.title}")
+          .col-xs-12.col-md-4.pull-right
+            .thumbnail
+              img.img-responsive(src="#{baseUrl + tour.image.url}", alt="#{tour.title}")
+          .col-xs-12.col-md-8.pull-left
+            h3.title
+              = tour.title
+            p.lead(style="padding-bottom: 3rem;padding-right:5rem")
+             = tour.description
       .row.border-top

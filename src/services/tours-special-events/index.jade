@@ -1,27 +1,25 @@
 extends ../../_layouts/parallax
-
+//make header bottom gap eq to photo line
 block config
   - var baseUrl = "../../"
   - var active = "Services"
 
 block content
   div.hero
-    img.img-responsive(src='/images/ai/events-hero.png')
+    img.img-responsive(src='/images/hero/tours-header.jpg')
   #hero-unit.row.black
     .col-xs-12.text-center
-      h1.title Tours and Special Events
-
-  each tour in site.data.tours
-    .row.black.border-top.tour
-      .col-xs-12
-        .container
-          .row
-            .col-xs-8
-              h3.title
-                = tour.title
-              p.lead(style="padding-bottom: 3rem")
-               = tour.description
-              a.btn.btn-default(role="button", href="/reservations") Reserve
-            .col-xs-4
-              .thumbnail
-                img.img-responsive(src="#{baseUrl + tour.image.url}", alt="#{tour.title}")
+      h1.title(style="padding: 4rem 0;") Tours and Special Events
+  .container
+    each tour in site.data.tours
+      .row.black.border-top.tour
+        .col-xs-12.col-md-4.pull-right
+          //pull right at tablet size
+          .thumbnail
+            img.img-responsive(src="#{baseUrl + tour.image.url}", alt="#{tour.title}")
+        .col-xs-12.col-md-8.pull-left
+          h3.title
+            = tour.title
+          p.lead(style="padding-bottom: 3rem;padding-right:5rem;")
+            = tour.description
+    .row.black.border-top

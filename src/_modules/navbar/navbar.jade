@@ -9,11 +9,11 @@ mixin navbar(spec)
     .container
       // Brand and toggle get grouped for better mobile display
       .navbar-header
-        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#nav-items")
+        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#nav-items", aria-expanded="false", aria-controls="navbar")
           span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+          span.icon-bar.top-bar
+          span.icon-bar.middle-bar
+          span.icon-bar.bottom-bar
         a.navbar-brand.brand(href="/")
           img.text(src=baseUrl + "images/logo.svg")
       // Collect the nav links, forms, and other content for toggling
@@ -23,7 +23,7 @@ mixin navbar(spec)
             - var hassubitems = (item.subitems && item.subitems.length > 0)
             - var isactive = (active == item.name)
             li(class='#{hassubitems ? "dropdown" : ""}')
-              +link(href=item.link,role="button",aria-haspopup="#{hassubitems}", aria-expanded="#{!hassubitems}",class='item #{hassubitems ? "dropdown-toggle" : ""} #{item.active ? "active" : ""} #{isactive ? "active" : ""}', data-delay="1000")
+              +link(href=item.link,role="button",aria-haspopup="#{hassubitems}", aria-expanded="#{!hassubitems}",class='item #{hassubitems ? "dropdown-toggle" : ""} #{item.active ? "active" : ""} #{isactive ? "active" : ""}')
                 = item.name
                 if hassubitems
                   b.caret.caret-down

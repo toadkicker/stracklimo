@@ -1,6 +1,9 @@
 extends _layouts/parallax
 include ../node_modules/jade-bootstrap/components/modal
-
+//fix carousel right btn
+//cut down the line height on now you arrived
+  //book your reservation font-weight 400
+  //
 block content
   #hero.hero-space-one.row
     .container
@@ -9,7 +12,7 @@ block content
         h1.title You've
         h1.title Arrived.
         .btn-group
-          a.btn.btn-strack(href="#") Book your reservation
+          a.btn.btn-strack(href=site.data.urls.reservations) Book your reservation
       #video.hidden-xs.col-sm-8.col-md-6.center-xs.middle-xs
         figure
           button(name="play", data-toggle="modal", data-target="#modal")
@@ -19,33 +22,42 @@ block content
   .row.content-space-one
     .text-center.col-xs-12(style="padding: 4rem")
       .container
+        //link to /about
         h1.title Luxury at every turn
-        p.lead From Los Angeles to Hong Kong and everywhere in between, Strack provides you with seamless transportation worldwide. Whether we are transporting one person or 500, we accommodate your needs with the latest luxury driven vehicles, onboard Wi-Fi and complimentary bottled water.
+        p.lead.white From Los Angeles to Hong Kong and everywhere in between, Strack provides you with seamless transportation worldwide. Whether we are transporting one person or 500, we accommodate your needs with the latest luxury driven vehicles, onboard Wi-Fi and complimentary bottled water.
         p
-          img.logo(src= baseUrl + "images/ai/logo.svg", alt="Strack Ground Logo", height="75")
+          img.logo(src= baseUrl + "images/ai/logo.png", alt="Strack Ground Logo", height="75")
   .row.content-block-one.row-centered
     #carousel-fleet.col-xs-12.carousel.slide.col-centered.carousel-fade(data-ride="carousel")
       // Wrapper for slides
       .carousel-inner.text-center(role="listbox")
-        each item in site.data.fleet
+        each item in site.data.homefleet
           if item.active
             .item.active.text-center
-              img(src=item.image.url, alt=item.image.alt, class=item.image.class)
+              a(href="/fleet")
+                img(src=item.image.url, alt=item.image.alt, class=item.image.class)
               .carousel-caption !{item.caption}
+              .book-this
+                p.lead !{item.name}
+                a.btn.btn-transparent(href=site.data.urls.reservations) Book this ride
           else
             .item.text-center
-              img(src=item.image.url, alt=item.image.alt)
+              a(href="/fleet")
+                img(src=item.image.url, alt=item.image.alt)
               .carousel-caption !{item.caption}
+              .book-this
+                p.lead !{item.name}
+                a.btn.btn-transparent(href=site.data.urls.reservations) Book this ride
         ol.carousel-indicators
-          each item, index in site.data.fleet
+          each item, index in site.data.homefleet
             li(class="#{item.active ? 'active' : ''}", data-target="#carousel-fleet", data-slide-to="#{index}")
-        a.left.carousel-control(href="#carousel-fleet", role="button", data-slide="prev")
-          i.fa.fa-chevron-circle-left(aria-hidden="true")
-          span.sr-only Previous
-
-        a.right.carousel-control(href="#carousel-fleet", role="button", data-slide="next")
-          i.fa.fa-chevron-circle-right(aria-hidden="true")
-          span.sr-only Next
+      //a.left.carousel-control(href="#carousel-fleet", role="button", data-slide="prev")
+      //  i.fa.fa-chevron-circle-left(aria-hidden="true")
+      //  span.sr-only Previous
+      //
+      //a.right.carousel-control(href="#carousel-fleet", role="button", data-slide="next")
+      //  i.fa.fa-chevron-circle-right(aria-hidden="true")
+      //  span.sr-only Next
   .row.content-space-two.row-centered.black
     .container
       .row.row-centered
@@ -58,7 +70,7 @@ block content
             .col-md-4.col-lg-4.col-sm-4.col-xs-4
               img.app-icon.img-responsive(src="/images/appscreens/icon.png")
             .col-md-8.col-lg-8.col-sm-8.col-xs-8
-              ul
+              ul.gray
                 li
                   p.lead(style="margin-bottom: 0") Real time updates
                 li
@@ -69,48 +81,52 @@ block content
                   p.lead(style="margin-bottom: 0") Instant Rate Quotes
           +appstorelinks
   #service.row.content-space-three
-    .text-center
-      h1.title At Your Service
-    .col-md-6.col-sm-6
-      ul
-        li 24-hour Live Customer Service Support
-        li Integration With Your Travel Management Company
-        li All-inclusive Rates, Including Taxes, Fuel, And Gratuity
-        li Instant Email Confirmation With Reservations
-    .col-md-6.col-sm-6
-      ul
-        li Real-time Alerts With Chauffeur Name And Cell Phone Number
-        li Professionally Trained And Experienced Staff
-        li GPS Tracking In All Company Vehicles
-        li Flight Tracking For Prompt Airport Transfers
+    .container
+      .row
+        .text-center
+          h1.title At Your Service
+        .col-md-6.col-sm-6
+          ul
+            li 24-hour Live Customer Service Support
+            li Integration With Your Travel Management Company
+            li All-inclusive Rates, Including Taxes, Fuel, And Gratuity
+            li Instant Email Confirmation With Reservations
+        .col-md-6.col-sm-6
+          ul
+            li Real-time Alerts With Chauffeur Name And Cell Phone Number
+            li Professionally Trained And Experienced Staff
+            li GPS Tracking In All Company Vehicles
+            li Flight Tracking For Prompt Airport Transfers
   .row.content-space-four.black
-    .text-center
-      h1.title Tours and Special Events
-    .col-xs-12.col-sm-6.col-sm-offset-6
-      p.lead.gray From shopping to sightseeing and everything in between we have the tour to make your day.&nbsp;
-        a(href="/about") Learn More
-      ul.list-unstyled.gray(style="font-size: 16px")
-        li
-          p.lead
-            i.icon.icon-star
-            | &nbsp;Hollywood and Los Angeles
-        li
-          p.lead
-            i.icon.icon-wine
-            | &nbsp;Micro Brew & Wine
-        li
-          p.lead
-            i.icon.icon-museum
-            | &nbsp;Museum Row
-        li
-          p.lead
-            i.icon.icon-shop
-            | &nbsp;Shop Melrose and more
+    .container
+      .row
+        .text-center
+          h1.title Tours and Special Events
+        .col-xs-12.col-sm-6.col-sm-offset-6
+          p.lead.gray From shopping to sightseeing and everything in between we have the tour to make your day.&nbsp;
+            a(href="/services/tours-special-events") Learn More
+          ul.list-unstyled.gray(style="font-size: 16px")
+            li
+              p.lead
+                i.icon.icon-star
+                | &nbsp;Hollywood and Los Angeles
+            li
+              p.lead
+                i.icon.icon-wine
+                | &nbsp;Micro Brew & Wine
+            li
+              p.lead
+                i.icon.icon-museum
+                | &nbsp;Museum Row
+            li
+              p.lead
+                i.icon.icon-shop
+                | &nbsp;Shop Melrose and more
   .row.content-space-five
   .row.content-space-six.black
     .container
       h1.title.text-center Executive Shuttle and Group Transportation
-      .col-sm-5.col-sm-offset-7.col-md-6.col-md-offset-6.gray.padding-bottom
+      .col-sm-5.col-sm-offset-7.col-md-6.col-md-offset-6.gray.padding-bottom(style="padding-top: 4rem;")
         span.medium Strack Ground offers the latest in Sedans to MotorCoaches paired with meeting staff and technology so transportation will no longer be a worry.
       .col-sm-5.col-sm-offset-7.col-md-6.col-md-offset-6.col-centered.gray
         ul.text-left(style="font-size: 16px")
