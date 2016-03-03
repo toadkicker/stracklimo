@@ -88,7 +88,6 @@ body #main {
     border: 1px solid $black;
     color: white;
     display: block;
-    font-family: "Raleway Bold", sans-serif;
     padding: 1rem 2rem;
     @include media('<tablet') {
       font-size: 1.5rem;

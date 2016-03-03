@@ -7,6 +7,8 @@ import browserSyncLib from 'browser-sync';
 import pjson from './package.json';
 import minimist from 'minimist';
 import wrench from 'wrench';
+import plumber from 'gulp-plumber';
+import deleteUnusedImages from 'gulp-delete-unused-images';
 
 // Load all gulp plugins based on their names
 // EX: gulp-copy -> copy
@@ -62,4 +64,13 @@ gulp.task('test', ['eslint'], (done) => {
     singleRun: !args.watch,
     autoWatch: args.watch
   }, done).start();
+});
+
+gulp.task('clean:images', (done) => {
+  gulp.src(['src/_images/**'])
+      .pipe(plumber())
+      .pipe(deleteUnusedImages({
+        log: true,
+        delete: true
+      }))
 });

@@ -16,12 +16,12 @@ export default class Navbar {
     this.toggleDropdown = function () {
       $(".dropdown").hover(
           function () {
-            $('.dropdown-menu', this).stop(true, true).fadeIn("fast");
+            $('.dropdown-menu', this).stop(true, true).fadeIn(300);
             $(this).toggleClass('open');
             $('b', this).toggleClass("caret caret-up");
           },
           function () {
-            $('.dropdown-menu', this).stop(true, true).fadeOut("fast");
+            $('.dropdown-menu', this).stop(true, true).fadeOut(300);
             $(this).toggleClass('open');
             $('b', this).toggleClass("caret caret-up");
           })

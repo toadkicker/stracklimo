@@ -75,17 +75,12 @@ body {
   @include content-space(url('/images/sunset-car.jpg'));
   padding-bottom: 6rem;
   .title:first-child, #video {
-    padding-top: $navbar-height;
-  }
-  &.title {
-    padding-bottom: 3rem;
+    padding-top: $navbar-height + 40px;
   }
   .title {
     color: $black;
     font-size: 10rem;
-  }
-  .btn {
-    font-family: 'Raleway Bold', sans-serif;
+    margin: 0;
   }
   .btn:hover {
     color: $white;

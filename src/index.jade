@@ -28,7 +28,7 @@ block content
         p
           img.logo(src= baseUrl + "images/ai/logo.png", alt="Strack Ground Logo", height="75")
   .row.content-block-one.row-centered
-    #carousel-fleet.col-xs-12.carousel.slide.col-centered.carousel-fade(data-ride="carousel")
+    #carousel-fleet.col-md-12.carousel.slide.carousel-fade(data-ride="carousel")
       // Wrapper for slides
       .carousel-inner.text-center(role="listbox")
         each item in site.data.homefleet
@@ -51,13 +51,6 @@ block content
         ol.carousel-indicators
           each item, index in site.data.homefleet
             li(class="#{item.active ? 'active' : ''}", data-target="#carousel-fleet", data-slide-to="#{index}")
-      //a.left.carousel-control(href="#carousel-fleet", role="button", data-slide="prev")
-      //  i.fa.fa-chevron-circle-left(aria-hidden="true")
-      //  span.sr-only Previous
-      //
-      //a.right.carousel-control(href="#carousel-fleet", role="button", data-slide="next")
-      //  i.fa.fa-chevron-circle-right(aria-hidden="true")
-      //  span.sr-only Next
   .row.content-space-two.row-centered.black
     .container
       .row.row-centered

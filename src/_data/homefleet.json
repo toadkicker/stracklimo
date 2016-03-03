@@ -113,13 +113,13 @@
   },
   {
     "active": false,
-    "name": "Mini Coach 38 Pax",
+    "name": "Mini Coach 39 Pax",
     "type": "Mini Coach",
-    "passenger_size": "38",
+    "passenger_size": "39",
     "usb": "34",
     "image": {
       "url": "/images/home/carousel/Mini Coach 38 PAXjpg.jpg",
-      "alt": "Mini Coach 38 PAx",
+      "alt": "Mini Coach 39 Pax",
       "class": "img-responsive"
     },
     "caption": "<h3 class='title'>Meet your fleet</h1>",

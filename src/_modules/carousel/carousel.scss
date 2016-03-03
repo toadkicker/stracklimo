@@ -108,14 +108,24 @@
 
 .book-this {
   position: absolute;
-  top: 20rem;
+  @include media('>desktop') {
+    top: 20rem;
+  }
+  @include media('<desktop') {
+    top: 15rem;
+  }
   left: 50%;
   right: 0;
   width: 50%;
   text-align: left;
   margin-left: 4rem;
   p.lead {
-    padding-bottom: 3rem;
+    @include media('>desktop') {
+      padding-bottom: 3rem;
+    }
+    @include media('<desktop') {
+      padding-bottom: 1rem;
+    }
     color: $white;
   }
 }
